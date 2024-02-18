@@ -7,7 +7,7 @@ client.on('ready', async () => {
 const { joinVoiceChannel } = require('@discordjs/voice');
 client.on('ready', () => {
   setInterval(async () => {
-    client.channels.fetch(null)
+    client.channels.fetch(null) // put ur voice id
       .then((channel) => {
         const VoiceConnection = joinVoiceChannel({
           channelId: channel.id,
